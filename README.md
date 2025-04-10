@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-# Main Branch is having code of the Riverpod Provider type : Provider
+# This Branch is having code of the Riverpod Provider type : StateProvider
 
 This project is a starting point for a Flutter application.
 
