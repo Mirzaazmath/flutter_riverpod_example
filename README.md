@@ -4,7 +4,7 @@ A new Flutter project.
 
 ## Getting Started
 
-# This Branch is having code of the Riverpod Provider type : StateProvider
+# This Branch is having code of the Riverpod Provider type : StateNotifier and StateNotifierProvider
 
 
 <img src ="https://github.com/Mirzaazmath/flutter_riverpod_example/blob/StateProvider/output/StateProvider/result.gif" height ="400">
