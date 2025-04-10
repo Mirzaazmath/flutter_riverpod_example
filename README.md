@@ -5,6 +5,7 @@ A new Flutter project.
 ## Getting Started
 
 # Main Branch is having code of the Riverpod Provider type : Provider
+<img src ="https://github.com/Mirzaazmath/flutter_riverpod_example/blob/main/output/Provider/Screenshot.png" height ="400">
 
 This project is a starting point for a Flutter application.
 
