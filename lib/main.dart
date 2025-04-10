@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter_riverpod_example/models/user_model.dart';
+import 'package:flutter_riverpod_example/providers/user_notifier.dart';
 import 'package:flutter_riverpod_example/screens/home_screen2.dart';
 import 'package:flutter_riverpod_example/screens/home_screen3.dart';
 
-import 'screens/home_screen.dart';
+
 
 void main() {
   /// here we are wrapping our MyApp with ProviderScope so that we can access all provider in our entire app
@@ -19,10 +21,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/// RiverPod StateProvider
+/// RiverPod StateNotifierProvider
 
-/// here we have created a State provider of dynamic type value which can able Updatable
-final nameProvider = StateProvider((ref) => "Mirza Azmathullah Baig");
-
-/// here we have created a State provider of Specific type value which can able Updatable
-final ageProvider = StateProvider<int>((ref) => 25);
+/// here we have created a StateNotifierProvider of UserNotifier,User type value which can able Updatable
+final userProvider = StateNotifierProvider<UserNotifier,User>((ref)=>UserNotifier(User(name: '', age: 0)));
