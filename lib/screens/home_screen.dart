@@ -11,8 +11,8 @@ class HomeScreen extends ConsumerWidget {
   /// here we are adding another parameter WidgetRef in build method of this class
   /// WidgetRef help us to communicate with StateProvider to get the data
   Widget build(BuildContext context, WidgetRef ref) {
-    ///here we are fetching the user Object from userProvider  using read method
-    final user = ref.watch(userProvider);
+    ///here we are fetching the user Object from userProvider  using read method and added select to avoid un-useful rebuilds
+    final name = ref.watch(userProvider.select((value)=>value.name));
     return Scaffold(
       appBar: AppBar(title: Text("Flutter RiverPod Example")),
       body: Padding(
@@ -20,9 +20,9 @@ class HomeScreen extends ConsumerWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Center(child: Text(user.name, style: TextStyle(fontSize: 24))),
+            Center(child: Text(name, style: TextStyle(fontSize: 24))),
             Center(
-              child: Text("Age : ${user.age}", style: TextStyle(fontSize: 24)),
+              child: Text("Age : ${26}", style: TextStyle(fontSize: 24)),
             ),
             SizedBox(height: 20),
             Container(

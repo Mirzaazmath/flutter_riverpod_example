@@ -13,18 +13,18 @@ class HomeScreen2 extends StatelessWidget {
       /// Here we are using  Consumer with to access the Providers
       body: Consumer(
         builder: (context, ref, child) {
-          ///here we are fetching the user Object from userProvider  using read method
-          final user = ref.watch(userProvider);
+          ///here we are fetching the user Object from userProvider  using read method and added select to avoid un-useful rebuilds
+          final name = ref.watch(userProvider.select((value)=>value.name));
 
           return Padding(
             padding: const EdgeInsets.all(20),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Center(child: Text(user.name, style: TextStyle(fontSize: 24))),
+                Center(child: Text(name, style: TextStyle(fontSize: 24))),
                 Center(
                   child: Text(
-                    "Age : ${user.age}",
+                    "Age : ${26}",
                     style: TextStyle(fontSize: 24),
                   ),
                 ),
